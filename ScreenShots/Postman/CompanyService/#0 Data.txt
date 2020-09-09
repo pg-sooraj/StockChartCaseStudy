@@ -1,0 +1,41 @@
+    {
+        "sectorName": "Finance"
+    }
+
+    {
+        "sectorName": "Automobile"
+    }
+
+    {
+        "sectorName": "IT"
+    }
+
+
+    {
+        "companyName": "My Bank",
+        "ceo": "John",
+        "turnover": 1000,
+        "brief": "Good company"
+    }
+
+    {
+        "companyName": "New Traders",
+        "ceo": "Mike",
+        "turnover": 2000,
+        "brief": "Startup"
+    }
+
+    {
+        "companyName": "Tesla",
+        "ceo": "Elon Musk",
+        "turnover": 3000,
+        "brief": "Electric Cars"
+    }
+
+    {
+        "directorName": "director-1"
+    }
+
+    {
+        "directorName": "director-2"
+    }
