@@ -28,6 +28,10 @@ public class Company {
 	private String turnover;
 	private String ceo;
 	@OneToMany(mappedBy="company", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<IPO> ipos;
+	@OneToMany(mappedBy="company", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<StockPrice> StockPrices;
+	@OneToMany(mappedBy="company", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Director> boardOfDirectors;
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "sector_id")
@@ -76,6 +80,18 @@ public class Company {
 	public void setBrief(String brief) {
 		this.brief = brief;
 	}
+	public List<IPO> getIpos() {
+		return ipos;
+	}
+	public void setIpos(List<IPO> ipos) {
+		this.ipos = ipos;
+	}
+	public List<StockPrice> getStockPrices() {
+		return StockPrices;
+	}
+	public void setStockPrices(List<StockPrice> stockPrices) {
+		StockPrices = stockPrices;
+	}
 	public Company(Integer id, String companyName, String turnover, String ceo, List<Director> boardOfDirectors,
 			Sector sector, String brief) {
 		super();
@@ -123,5 +139,18 @@ public class Company {
 	}
 	public Company() {
 		super();
+	}
+	public Company(Integer id, String companyName, String turnover, String ceo, List<IPO> ipos,
+			List<StockPrice> stockPrices, List<Director> boardOfDirectors, Sector sector, String brief) {
+		super();
+		this.id = id;
+		this.companyName = companyName;
+		this.turnover = turnover;
+		this.ceo = ceo;
+		this.ipos = ipos;
+		StockPrices = stockPrices;
+		this.boardOfDirectors = boardOfDirectors;
+		this.sector = sector;
+		this.brief = brief;
 	}
 }
